@@ -1,0 +1,13 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+.container{
+    margin-top: 30px;
+    margin-left: 50%;
+
+}
+#counter{
+    margin-top: 3rem;
+}
