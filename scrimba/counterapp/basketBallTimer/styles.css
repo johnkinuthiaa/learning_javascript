@@ -1,0 +1,65 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Cursed-timer-font'; /* Name your font family */
+    src: url('/home/slippery/learning_javascript/scrimba/counterapp/basketBallTimer/CursedTimerUlil-Aznm.ttf'); /* Locate the .ttf file within your directory*/
+  }
+  
+  
+h3{
+    font-family:'Radioland';
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+.home-scores,.guest-score{
+    font-family:'Cursed Timer ULiL';
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(255, 32, 78);
+}
+.container{
+    margin:0 auto;
+    justify-content: center;
+    display: flex;
+    background-color:rgb(27, 26, 85);
+    gap:40px;
+    position: relative;
+}
+.score-container{
+    display: flex;
+    flex-direction: column;
+    font-family:'Cursed Timer ULiL';
+    text-align: center;
+    justify-content: center;
+}
+button{
+    background-color:rgb(27, 26, 85);
+    padding: 10px;
+    margin: 4px;
+    border-radius: 7px;
+    border: 1px solid white;
+    color: #f0f0f0;
+    font-size: 20px;
+    font-weight: 20px;
+}
+.home-scores,.guest-score{
+    font-family: Cursed Timer ULiL;
+    background-color: rgb(12, 12, 12);
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    padding-top: 20px;
+}
+.restart-btn{
+    margin-top: 12rem;
+    
+}
+.winner{
+    font-size: large;
+    font-weight:bold;
+    color: #f0f0f0;
+}

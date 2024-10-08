@@ -8,3 +8,12 @@ firstName +='kinuthia'
 
 console.log(firstName)
 
+// reasigning variables
+
+let count =10
+count =count +3
+console.log(count)
+
+count =count-5
+console.log(count)
+

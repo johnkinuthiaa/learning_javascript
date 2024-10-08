@@ -10,4 +10,28 @@
 }
 #counter{
     margin-top: 3rem;
+    font-size: large;
+    font-weight: bold;
+    margin-left:140px ;
+}
+button{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    outline:none;
+    font-weight: bold;
+    font-size: large;
+
+}
+.b2{
+    margin-left: 140px;
+    background-color: teal;
+}
+.reset{
+    margin-left: 170px;
+}
+.people-recorded{
+    font-weight: bold;
+    font-size: large;
+    margin-top:20px;
 }

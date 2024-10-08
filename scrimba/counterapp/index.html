@@ -8,9 +8,19 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="people">people counted:</h1>
-        <p id="counter">0</p>
-        <script src="index.js"></script>
+        <div>
+            <h1 class="people">people counted:</h1>
+            <p id="counter">0</p>
+            <script src="index.js"></script>
+        </div>
+        <div class="buttons">
+            <button id="increment-btn" onclick="increment()">increase</button>
+            <button class="b2" id="decrement-btn" onclick="decrement()">Decrease</button><br>
+            <button class="save"onclick="save()">Save</button>
+            <button class="reset" id="reset" onclick="reset()">Reset</button><br>
+            <p id="peeopl">people recorded previously: </p><br>
+            <p id="people-recorded"></p>
+        </div>
     </div>
 </body>
 </html>

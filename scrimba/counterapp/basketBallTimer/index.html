@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="score.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+                
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <title>BasketBall timer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="home-container">
+            <h3 class="home" id="home">Home</h3>
+            <div class="score-container">
+                <p class="home-scores" id="home-scores">0</p>
+                <div class="buttons">
+                    <button onclick ="addOneHome()">+1</button>
+                    <button onclick ="addTwoHome()">+2</button>
+                    <button onclick ="addThreeHome()">+3</button>
+                </div>
+            </div>
+        </div>
+        <div class="restart-btn">
+            <button class="Restart" onclick="restart()">Restart game</button>
+            <p id="winner" class="winner"></p>
+        </div>
+        <div class="home-container">
+            <h3 class="guest">Guest</h3>
+            
+            <div class="score-container">
+                <p class="guest-score" id="guest-score">0</p>
+                <div class="buttons">
+                    <button onclick ="addOneGuest()">+1</button>
+                    <button onclick ="addTwoGuest()">+2</button>
+                    <button onclick ="addThreeGuest()">+3</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
