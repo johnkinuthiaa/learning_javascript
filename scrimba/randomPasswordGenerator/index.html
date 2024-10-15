@@ -10,6 +10,15 @@
     <div class="container">
         <h1 id="generate">Generate a <span id="random-password">random password</span></h1>
         <p id="p-el">Never use an insecure password again</p>
+        <label for="text">Enter password Length</label>
+        <input type="text" placeholder="password length" id="pass-length">
+        <label for="select">filter password:</label>
+        <select name="select" id="select">
+            <option value="1">letters,symbols and numbers</option>
+            <option value="2">Letters only</option>
+            <option value="3">letters and numbers</option>
+            <option value="4">letters and symbols</option>
+        </select>
         <button onclick="generatePass()">Generate passwords</button>
         <hr id="hr">
         <div class="password-holder">
