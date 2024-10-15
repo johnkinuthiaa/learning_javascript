@@ -1,0 +1,77 @@
+*{
+    margin:0px;
+    padding:0;
+    box-sizing: border-box;
+}
+#random-password{
+    color: #4ADF86;
+}
+button{
+    background-color: #4ADF86;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    font-size: larger;
+    font-weight: 500;
+
+}
+button:active{
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+body{
+    background-color: #1F2937;
+    text-align: center;
+    margin:100px auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1{
+    display: flex;
+    width: 50%;
+    align-items: flex-start;
+    flex-direction: column;
+}
+#generate{
+    color: #FFFFFF;
+}
+#p-el{
+    color: #D5D4D8;
+}
+#password-el,#password-ell{
+    color: #4ADF86;
+    background-color: #273549;
+    border-radius: 5px;
+    /* border: 1px solid green; */
+    font-size: large;
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+
+}
+.password-holder{
+    display: flex;
+    width: 100%;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.container>*{
+    /* padding: 2rem; */
+    margin: 20px;
+}
+#hr{
+    padding: 0;
+    width: 98%;
+    color: #1F2937;
+}
