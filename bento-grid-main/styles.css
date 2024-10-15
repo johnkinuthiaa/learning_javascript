@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 40px;
+}
+.container{
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+    display: grid;
+    gap:20px;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:repeat(4,minmax(150px, auto));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.container>*{
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+
+}
+.social-media-10x{
+    background-color: #7651DC;
+    border-radius: 5px;
+    text-align: center;
+    font-size: large;
+    margin-top: 20px;
+    padding: 2rem;
+    justify-content: flex-start;
+    position: relative;
+    grid-row: 1/3;
+    grid-column: 2/4;
+}
+#x{
+    color: #FAC770;
+}
+.reviews{
+
+}
+.schedule{
+    background-color: #DCD1FC;
+    border-radius: 5px;
+    text-align: center;
+    font-size: large;
+    margin-top: 20px;
+    padding: 2rem;
+    position: relative;
+    grid-row: 1/4;
+    grid-column: 4/5;
+}
+.create{
+    background-color: #FAEEE2;
+    border-radius: 5px;
+    text-align: center;
+    font-size: large;
+    margin-top: 20px;
+    padding: 2rem;
+    justify-content: flex-start;
+    position: relative;
+    grid-row: 1/3;
+    grid-column: 1/2;
+
+}
+.write{
+    background-color: #FFCC69;
+    border-radius: 5px;
+    text-align: center;
+    font-size: large;
+    margin-top: 20px;
+    padding: 2rem;
+    justify-content: flex-start;
+    position: relative;
+    grid-row: 3/5;
+    grid-column: 1/2;
+
+}
+.faster{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+    font-size: large;
+    margin-top: 20px;
+    padding: 2rem;
+    justify-content: flex-start;
+    position: relative;
+    grid-row: 4/5;
+    grid-column: 2/3;
+
+}
+.grow{
+    background-color: #7651DC;
+    border-radius: 5px;
+    text-align: center;
+    font-size: large;
+    margin-top: 20px;
+    padding: 2rem;
+    justify-content: flex-start;
+    position: inherit;
+    grid-row: 4/5;
+    grid-column: 3/5;
+
+}
+.manage{
+    border-radius: 5px;
+    text-align: center;
+    font-size: large;
+    margin-top: 20px;
+    padding: 2rem;
+    justify-content: flex-start;
+    position: inherit;
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+.maintain{
+    background-color: #FAC770;
+    border-radius: 5px;
+    text-align: center;
+    font-size: large;
+    margin-top: 20px;
+    padding: 2rem;
+    justify-content: flex-start;
+    position: inherit;
+    grid-row: 3/4;
+    grid-column: 3/4;
+}
