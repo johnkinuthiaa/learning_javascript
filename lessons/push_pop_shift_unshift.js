@@ -6,4 +6,4 @@ countries.unshift("Uganda")
 countries.pop()
 countries.push("zanzibar")
 
-console.log(countries)
+console.log(countries.length)

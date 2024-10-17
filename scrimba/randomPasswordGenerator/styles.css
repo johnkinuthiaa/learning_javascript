@@ -53,6 +53,9 @@ h1{
     text-align: center;
     justify-content: center;
     padding: 10px;
+    overflow: hidden;
+    word-wrap: break-word;
+    align-items: flex-start;
 
 }
 .password-holder{
