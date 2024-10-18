@@ -16,3 +16,9 @@ const createdButton =document.createElement("button")
 createdButton.textContent +="Buy Now"
 container.append(createdButton)
 
+const createParagraph =document.getElementById("el")
+
+createParagraph.innerHTML =`<p class="p-el">
+This is ${buyBtn} insane
+</p>`
+

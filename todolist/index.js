@@ -1,13 +1,30 @@
+let todoArray =[]
+const todoContainer =document.getElementById("todo-container")
+let inputValue = document.getElementById("input-new-todo")
+let newTodoBtn =document.getElementById("add")
 
-function getTodo(){
-    let inputValue = document.getElementById("input-new-todo").value
-    let newTodo =document.createElement("checkbox")
-    let pContent =document.createTextNode(" "+inputValue)
-    newTodo.appendChild(pContent)
-    const element = document.getElementById("new-todo");
-    element.appendChild(newTodo);
+
+newTodoBtn.addEventListener("click",function(){
+    createNewTodo()
+    inputValue.value =" "
+})
+
+function createNewTodo(){
+    let todo =inputValue.value;
+    if(todo !=null &&todo !=" "){
+        todoContainer.innerHTML +=
+        `<div class="todo">
+            <input type="checkbox" name="check-todo" id="check-todo">
+            <p class="p">${todo}</p>
+            <button type="submit" id="delete">Delete</button>
+        </div>`
+    }else{
+        alert("todo cannot be empty")
+    }
 
 }
+
+
 
 
 
