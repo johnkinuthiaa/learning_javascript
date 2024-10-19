@@ -23,3 +23,24 @@ let PersonDetails ={
 pElement.textContent +=PersonDetails.firstName.concat(" "+PersonDetails.age)
 console.log(PersonDetails.secondName)
 console.log(PersonDetails.age)
+
+let data = [
+    {
+        player: "Jane",
+        score: 52
+    }, 
+    {
+        player: "Mark",
+        score: 41
+    }
+]
+
+// Fetch the button from the DOM, store it in a variable
+// Use addEventListener() to listen for button clicks
+// Log Jane's score when the button is clicked (via data)
+const scoreBtn =document.getElementById("get-scores")
+let scoreEl=document.getElementById("scores")
+scoreBtn.addEventListener("click",function(){
+    let janeScore =data[0].score
+    scoreEl.textContent =janeScore
+})

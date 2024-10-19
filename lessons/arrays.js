@@ -13,3 +13,4 @@ let cards =[1,3,4,5,7,8,"pia string"]
 for(let i=0;i<cards.length;i++){
     console.log(cards[i])
 }
+

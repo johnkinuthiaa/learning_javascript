@@ -18,6 +18,7 @@ function createNewTodo(){
             <p class="p">${todo}</p>
             <button type="submit" id="delete">Delete</button>
         </div>`
+        
     }else{
         alert("todo cannot be empty")
     }
