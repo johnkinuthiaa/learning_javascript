@@ -1,4 +1,4 @@
-let inputVal =document.getElementById("unit")
+const inputVal =document.getElementById("unit")
 const convertBtn =document.getElementById("convert")
 let conversionDiv =document.getElementById("conversions")
 /*
@@ -27,38 +27,46 @@ function convertToMeters(value){
     return Math.round(toMeters*10000)/10000
 }
 function convertToLitres(value){
-    let toLitres =(value*0.264)
+    let toLitres =(value/0.264)
     return Math.round(toLitres*10000)/10000
 }
 function convertToKgs(value){
-    let toKgs =(value*2.204)
+    let toKgs =(value/2.204)
     return Math.round(toKgs*10000)/10000
 }
 function convert(){
     let val =inputVal.value*1
-    let metres =convertToMeters(val)
-    let feet =convertToFeet(val)
+    if(!isNaN(val)){
+        let metres =convertToMeters(val)
+        let feet =convertToFeet(val)
+    
+        let gallons =convertToGallons(val)
+        let litres =convertToLitres(val)
+    
+        let pounds =convertToPounds(val)
+        let kilograms =convertToKgs(val)
+    
+    
+        conversionDiv.innerHTML +=`
+        <div class="unit-holder">
+            <h3>Length(Metre/Feet)</h3>
+            <p>${val} metres = ${feet} feet| ${val} feet =${metres} meters</p>
+        </div>
+        <div class="unit-holder">
+            <h3>Volume(Litres/Gallons)</h3>
+            <p>${val} Litres = ${gallons} gallons| ${val} Gallons =${litres} Litres</p>
+        </div>
+        <div class="unit-holder">
+            <h3>Mass(Kilograms/Pounds)</h3>
+            <p>${val} Kilograms = ${pounds} pounds| ${val} Pounds =${kilograms} Kilograms</p>
+        </div>`
 
-    let gallons =convertToGallons(val)
-    let litres =convertToLitres(val)
-
-    let pounds =convertToPounds(val)
-    let kilograms =convertToKgs(val)
-
-
-    conversionDiv.innerHTML +=`
-    <div class="unit-holder">
-        <h3>Length(Metre/Feet)</h3>
-        <p>${val} metres = ${feet} feet| ${val} feet =${metres} meters</p>
-    </div>
-    <div class="unit-holder">
-        <h3>Volume(Litres/Gallons)</h3>
-        <p>${val} Litres = ${gallons} gallons| ${val} Gallons =${litres} Litres</p>
-    </div>
-    <div class="unit-holder">
-        <h3>Mass(Kilograms/Pounds)</h3>
-        <p>${val} Kilograms = ${pounds} pounds| ${val} Pounds =${kilograms} Kilograms</p>
-    </div>`
+    }else{
+        conversionDiv.innerHTML +=`
+        <div align="center""> 
+            <span id="error" style="color: red;">please enter a number</span> 
+        </div>`
+    }
 
 
 }

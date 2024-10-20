@@ -5,7 +5,7 @@
 
 }
 body{
-    background-color: #1F2937;
+    /* background-color: #1F2937; */
 }
 
 h2{
@@ -19,6 +19,9 @@ h2{
     align-items: center;
     align-content: center;
     justify-items: flex-start;
+    margin: 10px;
+
+
 }
 .header{
     background:rgb(105, 67, 255);
@@ -53,19 +56,20 @@ button{
 }
 .conversions{
     background-color: #1F2937;
-    width: 970px;
+    width: 978px;
+    padding: 20px;
     
 }
 textarea:focus, input:focus{
     outline: none;
 }
 .conversions>*{
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #273549;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     width: 100%;
-    margin: 10px 0;
+    margin: 0 0 20px 0;
 }
 h3{
     color: #CCC1FF;
@@ -77,4 +81,9 @@ h3{
 .unit-holder>p{
     color: #FFFFFF;
     font-size: 20px;
+}
+#errordiv{
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
 }
