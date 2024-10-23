@@ -14,9 +14,18 @@ function selectItem(item) {
     switch(item) {
         case 'coffee':
         price = 2
+        break   
+        case 'sandwiches':
+        price = 5
+        break   
+        case 'Salad':
+        price = 4
+        break   
+        case 'Lemon cake':
+        price = 3
         break    
     }
     return `You selected ${item}. That will be $${price}`
 }
 
-console.log(selectItem('biscuits'))
+console.log(selectItem('Salad'))

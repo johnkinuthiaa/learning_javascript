@@ -23,3 +23,16 @@ console.log(`my favourite movie is ${title}
     the star of the movie is ${star}
     and the director is ${director}
     `)
+
+    const dreamHoliday = {
+        destination: 'mautirius',
+        activity: 'chilling at the beach',
+        accommodation: 'hill side',
+        companion: 'Angela'
+    }
+    const { destination,activity,accommodation,companion } =dreamHoliday
+
+    console.log(`my dream destination this holiday is ${destination},
+    i just want to ${activity} after the long work season and i'll sleep at ${accommodation}.
+    i will be accompanied by ${companion}(a must) and we'll have fun together.`)
+
