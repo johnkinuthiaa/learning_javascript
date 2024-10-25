@@ -12,5 +12,4 @@ let isAlive =true
     },1000)
 
 
-
 console.log(`copyright ${date.getFullYear()},All rights reserved`)
