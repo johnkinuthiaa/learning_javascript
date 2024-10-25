@@ -32,7 +32,15 @@ console.log(`my favourite movie is ${title}
     }
     const { destination,activity,accommodation,companion } =dreamHoliday
 
-    console.log(`my dream destination this holiday is ${destination},
-    i just want to ${activity} after the long work season and i'll sleep at ${accommodation}.
-    i will be accompanied by ${companion}(a must) and we'll have fun together.`)
+    
 
+// set timeout
+setTimeout(function(){
+    console.log(`my dream destination this holiday is ${destination},
+        i just want to ${activity} after the long work season and i'll sleep at ${accommodation}.
+        i will be accompanied by ${companion}(a must) and we'll have fun together.`)
+},3000)
+console.log("before")
+setTimeout(function(){
+    console.log("after")
+},4000)
