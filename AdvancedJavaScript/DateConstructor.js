@@ -3,12 +3,12 @@ console.log(date.toString())
 console.log(date.getFullYear())
 console.log(date.getMinutes())
 
-console.log(date.getDate())
-const p =document.getElementById("p-el")
-let isAlive =true
+// console.log(date.getDate())
+// const p =document.getElementById("p-el")
+// let isAlive =true
 
     setTimeout(function(){
-        p.innerHTML =date.toLocaleTimeString()
+        console.log(date.toLocaleTimeString())
     },1000)
 
 

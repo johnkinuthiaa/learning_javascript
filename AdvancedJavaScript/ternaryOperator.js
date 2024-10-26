@@ -20,6 +20,7 @@ const mess =(condition)?"do this":"do this"
 const playerGuess = 7
 const correctAnswer = 6
 
+
 /*
 Challenge
 1. Now improve the functionality of this code by 

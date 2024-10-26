@@ -3,5 +3,6 @@
 // Don't know which method to use? Google it!
 
 const totalPrice = 420.69235632455
-const btn = document.getElementById("purchase-btn")
-btn.textContent = `Buy €${ totalPrice }`
+// const btn = document.getElementById("purchase-btn")
+// btn.textContent = `Buy €${ totalPrice }`
+console.log(Math.random().toFixed(2)*3)
