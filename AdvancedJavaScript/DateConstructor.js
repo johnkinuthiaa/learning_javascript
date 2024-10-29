@@ -1,4 +1,4 @@
-const date =new Date()
+let date =new Date()
 console.log(date.toString())
 console.log(date.getFullYear())
 console.log(date.getMinutes())
