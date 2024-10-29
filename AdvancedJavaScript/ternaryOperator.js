@@ -31,3 +31,9 @@ Challenge
 const message = (playerGuess === correctAnswer) ? 'exactly right!' : (playerGuess >correctAnswer)?" too high":"too low"
 
 console.log(message)
+
+// const emojis = ['🐥','🐯','🐼']
+const emojis = ['🐼']
+const duckExists = (emojis.includes('🐥'))?"The duck exists":(emojis.includes('🐯'))?"Duck does not exist but lion does":"neither lion nor duck exists";
+
+console.log(duckExists)

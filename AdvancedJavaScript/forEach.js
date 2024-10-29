@@ -20,12 +20,13 @@ const characters = [
         powers: [ 'flight', 'power', 'purity'],
     }
 ]
+//for each loop
 
-//looping arrays using for of
+characters.forEach(function(character){
+    const {title,emoji,power} =character
+    console.log(`title: ${title}`)
+})
 
-for(let character of characters ){
-    // console.log(character)
-    const { title,emoji,powers} =character;
-    console.log(`title: ${title} ,Emoji: ${emoji},powers: ${powers}`)
-
+for(let character of characters){
+    console.log(character)
 }

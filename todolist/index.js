@@ -1,29 +1,41 @@
-let todoArray =[]
-const todoContainer =document.getElementById("todo-container")
-let inputValue = document.getElementById("input-new-todo")
-let newTodoBtn =document.getElementById("add")
+// <ul id="list"></ul>
+// <label htmlFor="item-input">Item</label>
+// <input type="text" id="item-input" placeholder="e.g. rice"/>
+// <button id="add-item-btn">Add</button>
 
+let list =document.getElementById("list")
+let inputItem =document.getElementById("item-input")
+const addBtn =document.getElementById("add-item-btn")
 
-newTodoBtn.addEventListener("click",function(){
-    createNewTodo()
-    inputValue.value =" "
-})
+let myTodoArray=[]
 
-function createNewTodo(){
-    let todo =inputValue.value;
-    if(todo !=null &&todo !=" "){
-        todoContainer.innerHTML +=
-        `<div class="todo">
-            <input type="checkbox" name="check-todo" id="check-todo">
-            <p class="p">${todo}</p>
-            <button type="submit" id="delete">Delete</button>
-        </div>`
-        
+addBtn.addEventListener("click",function(){
+    if(inputItem.value !==""){
+        myTodoArray.push(inputItem.value)
+        list.innerHTML =""
+        inputItem.value =""
+        render()
     }else{
-        alert("todo cannot be empty")
+        onmessageerror("error")
     }
 
+
+})
+function render(){
+
+    let html =""
+    for(let item of myTodoArray){
+        html += `
+        <div>
+            <li class="list-item">${item}</li>
+        </div>`
+
+    }
+    list.innerHTML +=html
+
 }
+
+
 
 
 

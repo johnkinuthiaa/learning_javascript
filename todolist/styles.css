@@ -3,108 +3,60 @@
     padding: 0px;
     box-sizing: border-box;
 }
-body{
-    margin-top: 10px;
-    align-items: center;
-    margin-top: 10px;
-    text-align: center;
-    font-size: 50px;
-    display: block;
-    width: 80%;
-    margin: 0px auto;
+html, body, *{
+    font-family: 'Karla', sans-serif
 }
-h1{
-    background-color: aqua;
 
+h1{
+    text-align: center;
 }
+
 .container{
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 100vh;
-    
-    
+    gap: 10px;
+    width: 200px;
+    margin: 0 auto;
 }
-#todos{
-    margin-top: 10px;
-    
+
+.list-item, input[type="text"]{
+    border-radius: 5px;
 }
-input[type="checkbox"]{
-    width: 30px;
-    height: 30px;
+
+.list-item{
+    border: 2px solid skyblue;
+    min-width: 100%;
+    padding: 8px 13px;
+    background-color: whitesmoke;
+    font-weight: bold;
+    margin-bottom: 2px;
 }
-input[type="checkbox"]:focus{
-    outline: max(2px, 0.15em) solid currentColor;
-    outline-offset: max(2px, 0.15em);
+
+ul{
+    list-style: none;
+    padding-left: 0
+
 }
 
 input[type="text"]{
-    padding: 20px;
-    border-radius: 10px;
-    width: 20rem;
-    outline: none;
-    width: 30%;
-    font-size: large;
-    color: #B7B7B7;
-    
+    width: 100%;
+    padding: 10px 15px;
 }
-input[type="text"]:hover{
 
-    outline: none;
+label{
+    font-size: 18px;
+    margin-bottom: -20px;
+    margin-left: 10px;
+    padding-left: 3px;
+    z-index: 1000;
+    background-color: white;
+    width: 43px
 }
-input[type="text"]:active{
 
-    outline: none;
-}
+
 button{
-    padding: 20px;
-    font-size: large;
-    font-weight: bolder;
-    border-radius: 5px;
-    color: #f0f0f0;
-    background-color: #87A2FF;
-    border: none;
-    transition: box-shadow 0.15s;
-
-
-}
-button:hover{
-    outline: none;
-
-}
-button:active{
-    outline: none;
-    border: none;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-
-}
-
-#todo-container{
-    margin-top: 10px;
-
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
-
-}
-.todo{
-    display: flex;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    justify-content: flex-start;
-    align-items: center;
-    padding: 10px;
-    border-radius: 20px;
-    margin: 10px;
-
-}
-.todo>*{
-    padding: 10px;
-    margin: 10px;
-}
-#delete{
-    position: absolute;
-    right: 12%;
-    background: #D21312;
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px 17px;
+    cursor: pointer;
 }
