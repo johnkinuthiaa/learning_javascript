@@ -6,19 +6,20 @@
 let list =document.getElementById("list")
 let inputItem =document.getElementById("item-input")
 const addBtn =document.getElementById("add-item-btn")
+const errorMsg =document.getElementById("error-message")
 
 let myTodoArray=[]
 
 addBtn.addEventListener("click",function(){
-    if(inputItem.value !==""){
+    if(inputItem.value !=="" && !myTodoArray.includes(inputItem.value)){
         myTodoArray.push(inputItem.value)
         list.innerHTML =""
         inputItem.value =""
         render()
     }else{
-        onmessageerror("error")
+        inputItem.value =""
+        errorMsg.innerText +="item already exists or the input value is null"
     }
-
 
 })
 function render(){
