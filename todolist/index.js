@@ -4,7 +4,7 @@
 // <button id="add-item-btn">Add</button>
 
 let list =document.getElementById("list")
-let inputItem =document.getElementById("item-input")
+let inputItem = document.getElementById("item-input")
 const addBtn =document.getElementById("add-item-btn")
 const errorMsg =document.getElementById("error-message")
 
@@ -18,20 +18,26 @@ addBtn.addEventListener("click",function(){
         render()
     }else{
         inputItem.value =""
-        errorMsg.innerText +="item already exists or the input value is null"
+        errorMsg.innerText ="item already exists or the input value is null"
     }
 
 })
 function render(){
 
-    let html =""
-    for(let item of myTodoArray){
+    let html =" "
+    // for(let item of myTodoArray){
+    //     html += `
+    //     <div>
+    //         <li class="list-item">${item}</li>
+    //     </div>`
+    //
+    // }
+    myTodoArray.forEach(function(todo){
         html += `
         <div>
-            <li class="list-item">${item}</li>
+            <li class="list-item">${todo}</li>
         </div>`
-
-    }
+    })
     list.innerHTML +=html
 
 }
