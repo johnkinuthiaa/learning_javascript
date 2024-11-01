@@ -10,4 +10,5 @@ Challenge:
 const upperCaseParagraph = paragraph.replaceAll(/(?:^|\.\s)([A-Za-z])/g,function(match){
     return match.toUpperCase()
 })
+
 console.log(upperCaseParagraph)
