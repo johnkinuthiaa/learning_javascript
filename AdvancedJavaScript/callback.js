@@ -1,0 +1,1 @@
+// used instead of the word function...mostly in array methods and event listeners

@@ -58,7 +58,7 @@ function getAllShows(){
 }
 // getAllShows()
 // function all(){
-//     const newSeries =series.map(function(show){
+//     const newSeries =series.map((show)=>{
 //         const{ name,location,lengthInHours,genres} =show
 //         newDiv+=`
 //                 <div class="card">
