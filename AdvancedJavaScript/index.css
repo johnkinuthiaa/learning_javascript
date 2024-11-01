@@ -1,0 +1,11 @@
+.card{
+    border: 1px solid rgb(7, 10, 82);
+    width: 33.33%;
+    text-align: center;
+    align-items: flex-start;
+}
+#container{
+    display: flex;
+    justify-content: center;
+
+}
