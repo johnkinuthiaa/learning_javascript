@@ -8,7 +8,9 @@ console.log(children)
 const paragraph:string = "javaScript is the backbone of the internet. it was created in 1995. before JS, websites were so boring"
 
 // @ts-ignore
-const newParagraph:string =paragraph.replaceAll("j","k")
+const newParagraph:string =paragraph.replaceAll(/(?:^|\.\s)([A-Za-z])/g,(match:character)=>{
+	return match.toUpperCase()
+})
 console.log(newParagraph)
 
 
