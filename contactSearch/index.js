@@ -9,7 +9,7 @@ function searchContacts(inputName) {
         const { name, email, phone } = contact
         let regex =new RegExp(inputName,'gi')
         const doesMatch = regex.test(name)
-        const contactMatch =(doesMatch===true)?`
+        const contactMatch =(doesMatch)?`
         <div class="contact-card">
             <p>${name}</p>
             <p>${email}</p>
@@ -26,3 +26,5 @@ patternSearchSubmit.addEventListener("click",()=>{
     contactDisplay.innerHTML =" "
     searchContacts(userInput)
 })
+
+
