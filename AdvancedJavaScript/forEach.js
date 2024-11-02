@@ -22,11 +22,19 @@ const characters = [
 ]
 //for each loop
 
-characters.forEach(function(character){
-    const {title,emoji,power} =character
+characters.forEach((character)=>{
+    const {title} =character
     console.log(`title: ${title}`)
 })
 
 for(let character of characters){
-    console.log(character)
+    const {title} =character
+    console.log(`title: ${title}`)
 }
+const titles =characters.map( (character)=>{
+    const {title} =character
+    return title
+} )
+console.log(`title: ${titles}`)
+
+//comparison between the looping methods

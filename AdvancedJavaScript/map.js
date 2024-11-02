@@ -7,3 +7,9 @@ const convertedToKms =distanceWalkedMilesArr.map((kilometers)=>{
 })
 console.log(convertedToKms)
 
+
+const conv =distanceWalkedMilesArr.map((meters)=>{
+    return meters*1000*conversionFactorMilesToKm
+})
+console.log(conv)
+

@@ -8,8 +8,11 @@ let userChoice =" "
 let compGuess=" "
 let score =0
 let isAlive =false
+const btns =[rock,paper,scissors]
+
+
 function renderGame(){
-    rock.addEventListener("click",function(){
+    rock.addEventListener("click",()=>{
         results.innerHTML =""
         userChoice ="rock"
         compGuess = generateRandomNumber()
@@ -84,8 +87,7 @@ function renderGame(){
 }
 
 function generateRandomNumber(){
-    let randomNumber =Math.floor(Math.random()*3)
-    return randomNumber
+    return Math.floor(Math.random() * 3)
 }
 function startGame(){
     if(isAlive===false){
