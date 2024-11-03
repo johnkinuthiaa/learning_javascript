@@ -1,6 +1,7 @@
 {
   "name": "Scrim-s0qq34d4u8",
   "description": "https://v2.scrimba.com/advanced-javascript-c03kpi3kss/~0yfq",
+  "type": "module",
   "scripts": {
     "start": "vite",
     "dev": "vite",
