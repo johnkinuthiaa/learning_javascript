@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li>
+          <p>User management system</p>
+        </li>
+        <li>
+          <div class="admin">
+            <img src="https://i.pinimg.com/236x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg" alt="admin image"><br>
+            <p>Admin</p>
+          </div>
+
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <button id="get-all"> Get All employees</button>
+  <div class="container" id="employees-container">
+    <table>
+      <thead class="table-head">
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Email Id</td>
+        <td>Role</td>
+        <td>Actions</td>
+      </thead>
+    </table>
+    <div id="employees"></div>
+  </div>
+  <script src="index.js" type="module"></script>
+</body>
+</html>
