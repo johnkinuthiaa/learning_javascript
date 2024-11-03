@@ -11,17 +11,6 @@ fetch("http://localhost:8080/api/v1/admin/variants/delete/id?id=52",{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // fetch('http://localhost:8080/api/v1/admin/variants/get/name?name=audi')
 //     .then(response =>response.json())
 //     .then(data =>{
