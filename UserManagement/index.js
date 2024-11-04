@@ -75,15 +75,47 @@ async function addUser() {
         <input type="text">
         <label for="" id="role">Role</label>
         <input type="text">
-        <button type="submit" id="submit-form">save</button>
+        <button type="button" id="submit-form">save</button>
     </form>
+    
     `
-    const response =await fetch("http://localhost:8080/api/v1/users/save/user",{
-        method:"POST",
-        body:JSON.stringify({
+    const firstname =document.getElementById("firstname").value
+    const lastname =document.getElementById("lastname").value
+    const emails =document.getElementById("email").value
+    const roles =document.getElementById("role").value
+    const submitBtn =document.getElementById("submit-form")
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
 
+    submitBtn.addEventListener("click",async () => {
+        const response =await fetch("http://localhost:8080/api/v1/users/save/user",{
+            method:"POST",
+            body:JSON.stringify({
+                firstName:`${firstname}`,
+                lastName:`${lastname}`,
+                email:`${emails}`,
+                role:`${roles}`
+            }),headers: myHeaders
         })
+        const data =await response.json()
+        return data.map((resp)=>{
+            const {firstName, lastName, email, role} = resp
+            container.innerHTML += `
+                <div class="card">
+                    <p>${firstName}</p>
+                    <p>${lastName}</p>
+                    <p>${email}</p>
+                    <p>${role}</p>
+                    <div class="button-container">
+                        <button type="submit" id="edit">Edit  </button>
+                        <button type="submit" id="delete" onclick="deleteItem()">Delete<img src="delete.svg" alt=""></button>   
+                    </div>
+                </div>
+        `
+
+        }).join("")
     })
+
 
 }
 
