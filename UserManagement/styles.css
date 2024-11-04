@@ -99,7 +99,7 @@ button:active{
   text-align: center;
 
 }
-.button-container>*{
+.button-container>*,button{
   padding: 5px 10px;
   font-weight: bold;
   font-size: large;
@@ -109,8 +109,9 @@ button:active{
   border-radius: 5px;
 
 }
-#edit{
+#edit,#add-new{
   background-color: #007BFF;
+
 }
 #delete{
   background-color: #DC3545;
@@ -120,3 +121,42 @@ button>img{
   width: 20px;
   align-items: center;
 }
+section{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  margin: 0 auto;
+}
+section>*{
+  padding: 5px;
+
+}
+#search-btn{
+  background-color: #28A745;
+}
+input[type="search"]{
+  padding: 10px;
+  outline: none;
+}
+#add-new-user-form{
+  margin: 0 auto;
+  width: 80%;
+  justify-content: center;
+  text-align: start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#add-new-user-form>*{
+  /*margin-top: 5px;*/
+  padding: 10px;
+}
+#add-new-user-form>button{
+  margin-top: 5px;
+}
+
+
+
+
+
