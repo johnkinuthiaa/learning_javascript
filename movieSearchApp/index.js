@@ -5,6 +5,7 @@
  function getRandomNumbers(){
     return Math.ceil(Math.random()*1000000)
  }
+ // app.imdb.com2wex6aeu6a8q9e49k7sfvufd6rhh0n
 let container =document.getElementById("container")
  let endPoint =`tt9${getRandomNumbers()}`
 
@@ -18,11 +19,11 @@ let container =document.getElementById("container")
      console.log(movies)
      return movies.map( (movie)=> {
          const{ Title,Year,Type,Poster	} =movie
-         if(Type !==undefined && Type !=="episode"){
+         if(Type !==undefined && Type !=="episode" &&Poster !=="N/A"){
              container.innerHTML +=`
                 <div class="card" id="card-item">
                     <img src="${Poster}" > 
-                    <p>${Title}</p>
+                    <h3>${Title}</h3>
                     <p>Year:${Year}</p>
                     <p>Type:${Type}</p>
                 </div>
