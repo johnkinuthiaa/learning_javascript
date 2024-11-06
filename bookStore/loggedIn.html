@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
 <header>
@@ -20,13 +21,16 @@
                     <p>home</p>
                     <p></p>
                     <p>About Us</p>
+
                 </div>
             </li>
             <li>
-                <div id="profile-info">
-                    <p><a href="login.html">login</a></p>
-                    <p><a href="register.html">register</a></p>
-                    <p></p>
+                <div class="search-cont">
+                    <input type="search" name="search" id="search" placeholder="search">
+                    <button type="submit" id="search-book-btn">Search</button>
+                    <div id="profile-info">
+                        <p id="name">home</p>
+                    </div>
                 </div>
 
             </li>
@@ -34,6 +38,8 @@
         </ul>
     </nav>
 </header>
+<div id="book-container"></div>
+<script src="homePage.js" type="module"></script>
 
 </body>
 </html>

@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <form action="loggedIn.html">
         <div class="container">
+            <h3>Login</h3>
+            <p>Enter your username below to login to your account</p>
             <label for="username">Username:</label>
-            <input type="text" id="username">
-            <label for="username">Username:</label>
-            <input type="text" id="password">
-            <button type="submit">submit:</button>
+            <input type="text" id="username" placeholder="johnDoe@12" required minlength="6">
+            <label for="password">password:</label>
+            <input type="password" id="password" placeholder="password" required minlength="6">
+            <button type="submit">log in</button>
+            <p>Don't have an account? <a href="register.html">Sign up</a></p>
 
         </div>
 

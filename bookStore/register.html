@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
+<form action="login.html">
+    <div class="container">
+        <h3>Register new account</h3>
+        <p>Enter your username and password below to create an account</p>
+        <label for="username" >New username:</label>
+        <input type="text" id="username" placeholder="johnDoe@12" required minlength="4">
+        <label for="password">new password:</label>
+        <input type="password" id="password" placeholder="password" required minlength="6">
+        <label for="new-password">new password again:</label>
+        <input type="password" id="new-password" placeholder="password" required minlength="6">
+        <button type="submit">Register Account</button>
+
+    </div>
+
+</form>
 
 </body>
 </html>
