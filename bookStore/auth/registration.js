@@ -1,40 +1,56 @@
 // import {popUpMessage} from "../notification/popUp.js";
-const usernameHolder =document.getElementById("username")
-const passwordHolder =document.getElementById("password")
-const emailHolder =document.getElementById("email")
-const newPassword =document.getElementById("new-password")
+const usernameHolder = document.getElementById("username");
+const passwordHolder = document.getElementById("password");
+const emailHolder = document.getElementById("email");
+const submitBtn = document.getElementById("submit-registration");
+let errorMessage = document.getElementById("error");
 
-const submitBtn =document.getElementById("submit-registration")
-let errorMessage =document.getElementById("error")
-async function register(username,email,password){
-    const myHeaders =new Headers()
-    myHeaders.append('Content-Type', 'application/json')
-    console.log(myHeaders)
+const BASEURL ="http://localhost:8080/user"
+async function register(username, email, password) {
+    const myHeaders = new Headers();
+    const role='USER'
+    myHeaders.append('Content-Type', 'application/json');
 
-    const response =await fetch("http://localhost:8080/user/register",{
-        method:"POST",
-        body:JSON.stringify({
-            username:`${username}`,
-            email:`${email}`,
-            password:`${password}`
-        }),headers: myHeaders
-    })
-    window.location.href ="/bookStore/login.html"
-    localStorage.setItem("role","USER")
-    localStorage.getItem("role")
-    const data =await response.json()
-    console.log(data)
+    try{
+        const response =await fetch(`${BASEURL}/register`,{
+            method:"POST",
+            body:JSON.stringify({
+                username:`${username}`,
+                email:`${email}`,
+                password:`${password}`,
+                role:`${role}`
+            }),headers:myHeaders
+        })
+        if(!response.ok){
+            errorMessage ="error logging in!"
+            throw Error("network error")
+        }
+        const data =await response.json()
+        localStorage.setItem('role',`${role}`)
+        window.location.replace("./login.html");
+        console.log(data);
+
+    }catch (e){
+        console.log(e)
+    }
+
 
 }
-
-submitBtn.addEventListener("click",()=>{
+submitBtn.addEventListener("click",(event)=>{
+    event.preventDefault();
     const username =usernameHolder.value
     const email =emailHolder.value
     const password =passwordHolder.value
+    if (!username || !email || !password) {
+        errorMessage.textContent = 'All fields are required.';
+        return;
+    }
 
-
-    register(username, email, password).then(r  =>console.log("submitted"))
-
+    setTimeout(()=>{
+        register(username,email,password).then( ()=>{
+            console.log("logged in")
+        })
+    },2000)
 })
 
 
@@ -49,13 +65,4 @@ submitBtn.addEventListener("click",()=>{
 
 
 
-// const response =true
-// if(!response.ok){
-//     errorMessage.innerHTML =`
-//         <div class="pop-up">
-//             <p><img src="" alt="error">Could not log you in!</p>
-//         </div>
-//         `
-// }else{
-//     window.location.href = 'https://www.google.com';
-// }
+
