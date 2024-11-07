@@ -7,8 +7,8 @@ const errorMessage =document.getElementById("error")
 
 async function logIn(username,email,password){
     try{
-        const header =new Headers()
-        header.append('Content-Type ',"application/json")
+        const myHeaders =new Headers()
+        myHeaders.append('Content-Type', 'application/json');
         const response =await fetch("http://localhost:8080/user/login",{
             method:"POST",
             body:JSON.stringify(
@@ -16,17 +16,18 @@ async function logIn(username,email,password){
                     username:`${username}`,
                     email:`${email}`,
                     password:`${password}`
-                }),header
+                }),headers:myHeaders
         })
         const data = await response.json()
         console.log(data)
         if(response.ok){
             localStorage.setItem("jwtToken",`${data}`)
+            console.log(localStorage.getItem("jwtToken"))
             setTimeout( ()=>{
                 window.location.replace("./loggedIn.html");
             },2000)
         }else{
-            errorMessage.innerHTML ="not logged in"
+            errorMessage.innerHTML ="wrong Email or password"
         }
 
     }catch (e) {

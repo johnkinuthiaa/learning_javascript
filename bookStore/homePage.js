@@ -4,6 +4,7 @@ const profile =document.getElementById("profile-info");
 let searchBar =document.getElementById("search")
 let bookContainer =document.getElementById("book-container")
 
+bookContainer.innerHTML =localStorage.getItem("jwtToken")
 function getBooks(books) {
     // const response =await fetch("");
     // const data =await response.json()
