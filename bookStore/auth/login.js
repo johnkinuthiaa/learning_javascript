@@ -19,9 +19,11 @@ async function logIn(username,email,password){
                 }),headers:myHeaders
         })
         const data = await response.json()
-        console.log(data)
+        const valuesArray = Object.values(data);
+        const jwtKeyValue = valuesArray.find(value => value.includes('eyJ'));
+        console.log(jwtKeyValue)
         if(response.ok){
-            localStorage.setItem("jwtToken",`${data}`)
+            localStorage.setItem("jwtToken",`${jwtKeyValue}`)
             console.log(localStorage.getItem("jwtToken"))
             setTimeout( ()=>{
                 window.location.replace("./loggedIn.html");
