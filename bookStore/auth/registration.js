@@ -1,12 +1,11 @@
 import popUpMessage from "../notification/popUp.js";
-const usernameHolder =document.getElementById("username")
-const passwordHolder =document.getElementById("password")
-const emailHolder =document.getElementById("email")
+
 
 let errorMessage =document.getElementById("error")
 const newPassword =document.getElementById("new-password")
 
 export default async function register(){
+    console.log("clicked")
     const username =usernameHolder.value
     const email =emailHolder.value
     const password =passwordHolder.value
@@ -21,11 +20,12 @@ export default async function register(){
             password:`${password}`
         }),headers
     })
+    console.log(response)
     const data = await response
     if(!response.ok){
         errorMessage.innerHTML =popUpMessage();
     }else{
-        window.location.href ="bookStore/login.html"
+        window.location.href = 'https://www.google.com';
     }
     return data;
 }
