@@ -10,11 +10,13 @@
     <div class="container">
         <h3>Register new account</h3>
         <p>Enter your username and password below to create an account</p>
-        <label for="username" >New username:</label>
-        <input type="text" id="username" placeholder="johnDoe@12" required minlength="4">
+        <p id="error"></p>
+
+        <label for="username" >Username:</label>
+        <input type="text" id="username" placeholder="johnDoe123" required minlength="4">
 
         <label for="email" >Email:</label>
-        <input type="text" id="email" placeholder="johnDoe123@gmail.com" required minlength="4">
+        <input type="email" id="email" placeholder="johnDoe123@gmail.com" required minlength="4">
 
         <label for="password">new password:</label>
         <input type="password" id="password" placeholder="password" required minlength="6">
@@ -28,7 +30,7 @@
     </div>
 
 </form>
-    <script src="/bookStore/service/userService.js" type="module"></script>
+    <script src="auth/registration.js" type="module"></script>
 
 </body>
 </html>
