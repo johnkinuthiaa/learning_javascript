@@ -22,7 +22,7 @@ async function register(username, email, password) {
             }),headers:myHeaders
         })
         if(!response.ok){
-            errorMessage ="error logging in!"
+            errorMessage ="Error logging in!"
             throw Error("network error")
         }
         const data =await response.json()

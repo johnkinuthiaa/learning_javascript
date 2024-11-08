@@ -45,6 +45,9 @@ submitBtn.addEventListener("click",(event)=>{
     setTimeout( ()=>{
         logIn(username,email,password).then( ()=>{
             console.log("logged in")
+            usernameHolder.value =""
+            emailHolder.value=""
+            passwordHolder.value =""
         })
     },5000)
 })

@@ -1,4 +1,4 @@
-localStorage.setItem("name","john") //like in discionary or json
+localStorage.setItem("name","john") //like in dictionary or json
 let myName =localStorage.getItem("name")
 console.log(myName)
 
