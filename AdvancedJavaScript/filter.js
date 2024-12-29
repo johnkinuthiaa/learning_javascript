@@ -74,7 +74,6 @@ function getAllShows(){
          container.innerHTML =newDiv
 
      })
-
  }
  all()
 
